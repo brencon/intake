@@ -1,6 +1,7 @@
 'use strict';
 
 /**
+ * index.js
  * Adds commas to a number
  * @param {number} number
  * @param {string} locale
