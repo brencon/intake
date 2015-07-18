@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/brencon/intake.svg?branch=master)](https://travis-ci.org/brencon/intake) [![Coverage Status](https://coveralls.io/repos/brencon/intake/badge.svg?branch=master&service=github)](https://coveralls.io/github/brencon/intake?branch=master)
+
+[![NPM](https://nodei.co/npm/intake.png)](https://nodei.co/npm/intake/)
+
 # intake
 JavaScript utilities and other helper methods for intake form applications.
 
