@@ -1,0 +1,29 @@
+{
+  "name": "intake",
+  "version": "0.0.1",
+  "description": "JavaScript utilities and other helper methods for intake form applications.",
+  "engines": {
+    "node": ">=0.12.6"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brencon/intake.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "brendan.conrad@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brencon/intake/issues"
+  },
+  "homepage": "https://github.com/brencon/intake#readme",
+  "devDependencies": {
+    "chai": "^3.1.0",
+    "mocha": "^2.2.5"
+  }
+}
