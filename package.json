@@ -1,6 +1,6 @@
 {
   "name": "intake",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "JavaScript utilities and other helper methods for intake form applications.",
   "engines": {
     "node": ">=0.12.6"
