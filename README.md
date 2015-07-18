@@ -10,6 +10,9 @@ This module was created out of a need to access a global library of JavaScript h
 ## Tests
 `npm test`
 
+### Continuous Integration
+Continuous integration provided by [Travis CI](https://travis-ci.org).
+
 ## Contributing
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
 
