@@ -13,6 +13,9 @@ This module was created out of a need to access a global library of JavaScript h
 ### Continuous Integration
 Continuous integration provided by [Travis CI](https://travis-ci.org).
 
+### Code Coverage
+Code coverage is maintained using [Istanbul](http://gotwarlost.github.io/istanbul/) with [Coveralls](https://coveralls.io) reporting.
+
 ## Contributing
 In lieu of a formal style guide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code.
 
