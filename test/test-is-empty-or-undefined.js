@@ -1,7 +1,8 @@
 'use strict';
 
 var expect = require('chai').expect;
-var intake = require('../index');
+var Intake = require('../index');
+var intake = new Intake();
 
 describe('#isEmptyOrUndefined', function() {
 	it('object should be undefined', function() {

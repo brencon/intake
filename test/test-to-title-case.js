@@ -1,7 +1,8 @@
 'use strict';
 
 var expect = require('chai').expect;
-var intake = require('../index');
+var Intake = require('../index');
+var intake = new Intake();
 
 describe('#toTitleCase - String Formatted to Title Case', function() {
 	it('String contents unchanged ignoring minor words', function() {
