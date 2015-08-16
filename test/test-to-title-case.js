@@ -28,6 +28,46 @@ describe('#toTitleCase - String Formatted to Title Case', function() {
 			var result = strTitleCaseArray[i][0];
 			expect(result).to.equal(strArray[i][0].toUpperCase());
 		}
+	});
+	it('First character in minor word only changed to upper case', function() {
+		var str = 'and';
+		var result = intake.toTitleCase(str)[0]
+		expect(result).to.equal('A');
+	});	
+	it('First character in minor word only changed to upper case with minorsToLowerCase true', function() {
+		var str = 'and';
+		var result = intake.toTitleCase(str, true)[0]
+		expect(result).to.equal('A');
+	});
+	it('First character in minor word only changed to upper case in sentence with minorsToLowerCase true', function() {
+		var str = 'and all the words were changed';
+		var result = intake.toTitleCase(str, true);
+		expect(result).to.equal('And All the Words Were Changed');
+	});	
+	it('Hyphenated word set to title case', function() {
+		var str = 'hyphenated-word';
+		var result = intake.toTitleCase(str);
+		expect(result).to.equal('Hyphenated-word');
+	});
+	it('Possessive word set to title case', function() {
+		var str = 'it\'s';
+		var result = intake.toTitleCase(str);
+		expect(result).to.equal('It\'s');
+	});
+	it('Possessive word in sentence set to title case', function() {
+		var str = 'this test is for it\'s';
+		var result = intake.toTitleCase(str, true);
+		expect(result).to.equal('This Test is for It\'s');
+	});
+	it('Ignored word is ignored', function() {
+		var str = 'III';
+		var result = intake.toTitleCase(str);
+		expect(result).to.equal('III');
+	});	
+	it('Ignored word in a different case changed to title case', function() {
+		var str = 'iii';
+		var result = intake.toTitleCase(str);
+		expect(result).to.equal('Iii');
 	});	
 });
 
