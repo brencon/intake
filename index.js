@@ -1,6 +1,4 @@
-//  Intake.js 0.7.6
-//  http://intakejs.com
-//  (c) 2013 Victor Quinn
+//  intake by Brendan Conrad
 //  Intake may be freely distributed or modified under the MIT license.
 
 (function () {
