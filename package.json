@@ -1,11 +1,14 @@
 {
   "name": "intake",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JavaScript utilities and other helper methods for intake form applications.",
+  "main": "index.js",
   "engines": {
     "node": ">=0.12.6"
   },
-  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },  
   "scripts": {
     "test": "mocha --reporter spec",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec test/*"
