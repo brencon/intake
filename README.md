@@ -9,7 +9,12 @@ JavaScript utilities and other helper methods for intake form applications.
 This module was created out of a need to access a global library of JavaScript helper functions targeted at assisting applications built around intake forms. This module includes several utilities to make building intake form applications easier, and provide consistency around how data is formatted.
 
 ## Installation
+
+### npm
 `npm install intake -S`
+
+### bower
+`bower install intake -S`
 
 ## Tests
 `npm test`
