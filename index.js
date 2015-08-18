@@ -28,6 +28,33 @@
 		}
    };
 
+   // isNumeric
+   //		args: str
+   //		summary: checks if a string is numeric
+   //		return: Boolean
+	Intake.prototype.isNumeric = function(str) {
+  		return !isNaN(parseFloat(str)) && isFinite(str);
+	}
+
+	// formatSSN
+	//		args: ssn
+	//		summary: converts a string of numbers with a length of 9 characters to XXX-XX-XXXX format
+	//		return: String	
+	Intake.prototype.formatSSN = function(ssn) {
+		if ((!this.isEmptyOrUndefined(ssn)) && (ssn.length === 9)) {
+			// is every character a number
+			for (var i = 0; i < ssn.length; i++) {
+				if (!this.isNumeric(ssn[i])) {
+					return ssn;
+				}
+			}
+			return ssn.substr(0,3) + '-' + ssn.substr(3,2) + '-' + ssn.substr(5,4);
+		}
+		else {
+			return ssn;
+		}
+	};
+
 	// toTitleCase
 	//		args: str
 	//		summary: converts all elements of a string to title case
