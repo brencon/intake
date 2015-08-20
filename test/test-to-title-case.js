@@ -31,6 +31,11 @@
 				expect(result).to.equal(strArray[i][0].toUpperCase());
 			}
 		});
+		it('Example in README.md - format this string to title case', function() {
+			var str = 'format this string to title case';
+			var result = intake.toTitleCase(str, true);
+			expect(result).to.equal('Format This String to Title Case');
+		});		
 		it('First character in minor word only changed to upper case', function() {
 			var str = 'and';
 			var result = intake.toTitleCase(str)[0];

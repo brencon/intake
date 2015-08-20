@@ -8,6 +8,24 @@ JavaScript utilities and other helper methods for intake form applications.
 ## Overview
 This module was created out of a need to access a global library of JavaScript helper functions targeted at assisting applications built around intake forms. This module includes several utilities to make building intake form applications easier, and provide consistency around how data is formatted.
 
+## Methods
+| Method          | Description   |
+| --------------- |---------------|
+| addLeadingZeros | Pads a number or string with zeros on the left |
+| isEmptyOrUndefined | Determines if an object is empty, null, or undefined |
+| isNumeric | Determines if a string can be interpreted as numeirc |
+| formatSSN | Formats a string of numbers as XXX-XX-XXXX |
+| toTitleCase | Capitalizes the first character of each word in a string |
+
+### Examples
+| Example | Returns |
+| ------- | ------- |
+| `intake.addLeadingZeros(1, 4)` | '0001' |
+| `intake.isEmptyOrUndefined('')` | true |
+| `intake.isNumeric('ABC')` | false
+| `intake.formatSSN('123456789')` | '123-45-6789' |
+| `intake.toTitleCase('format this string to title case', true)` | 'Format This String to Title Case' |
+
 ## Installation
 
 ### npm
