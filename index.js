@@ -3,10 +3,35 @@
 
 (function () {
 
-    // Constructor
-    function Intake () {
-        return this;
-    }
+	// Constructor
+	function Intake () {
+  		return this;
+	}
+
+	// ****************************************************************************************************
+	// addLeadingZeros
+	// ****************************************************************************************************
+	//		args: 
+	//			str: 	the number or string to add leading zeros to
+	//			len: 	the full length of the return string including str
+	//		summary:
+	//			expects a number or string and returns a new string with leading zeros
+	//			the return string length is determined by len using the formula
+	//				return string length = length of str plus len
+	// ****************************************************************************************************
+   Intake.prototype.addLeadingZeros = function(str, len) {
+   	if (!this.isEmptyOrUndefined(str) && (typeof len === 'number') && ((typeof str === 'string') || (typeof str === 'number'))) {
+			var strWithLeadingZeros = '' + str;
+  			while (strWithLeadingZeros.length < len) {
+	  			strWithLeadingZeros = '0' + strWithLeadingZeros;
+  			}
+  			return strWithLeadingZeros;
+  		}
+  		else {
+  			return str;
+  		}
+  	};
+	// ****************************************************************************************************
 
 	// isEmptyOrUndefined
 	//		args: obj
@@ -34,7 +59,7 @@
    //		return: Boolean
 	Intake.prototype.isNumeric = function(str) {
   		return !isNaN(parseFloat(str)) && isFinite(str);
-	}
+	};
 
 	// formatSSN
 	//		args: ssn

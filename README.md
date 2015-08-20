@@ -19,7 +19,7 @@ This module was created out of a need to access a global library of JavaScript h
 ## Tests
 `npm test`
 
-### Code Coverage
+## Code Coverage
 Code coverage is maintained using [Istanbul](http://gotwarlost.github.io/istanbul/) with [Coveralls](https://coveralls.io) reporting.
 
 ## Continuous Integration
