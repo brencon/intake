@@ -10,10 +10,29 @@
 [2K[0G  [32m  √[0m[90m return string length paramater should be ignored if not a number[0m
 [2K[0G  [32m  √[0m[90m if len is negative no leading zeros should be added[0m
 
+[0m  #addYearsToDate[0m
+[2K[0G  [32m  √[0m[90m add one year to a date[0m
+[2K[0G  [32m  √[0m[90m add ten years to a date[0m
+[2K[0G  [32m  √[0m[90m add minus one year to a date[0m
+[2K[0G  [32m  √[0m[90m expect a non-date to return the same value[0m
+[2K[0G  [32m  √[0m[90m expect a date without years to add to be the same date[0m
+
 [0m  #formatSSN[0m
 [2K[0G  [32m  √[0m[90m nine-character string of numbers should be XXX-XX-XXXX[0m
 [2K[0G  [32m  √[0m[90m string with letters will not be formatted to SSN[0m
 [2K[0G  [32m  √[0m[90m string already formatted as SSN will not change[0m
+
+[0m  #getDateDiff[0m
+[2K[0G  [32m  √[0m[90m return one second difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return negative one second difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return one minute difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return one hour difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return one day difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return one week difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return one month difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return one year difference between two dates[0m
+[2K[0G  [32m  √[0m[90m return undefined if interval is unknown[0m
+[2K[0G  [32m  √[0m[90m return NaN if one or both of the dates are not a date[0m
 
 [0m  #isEmptyOrUndefined[0m
 [2K[0G  [32m  √[0m[90m object should be undefined[0m
@@ -55,5 +74,5 @@
 [2K[0G  [32m  √[0m[90m Undefined is ignored[0m
 
 
-[92m [0m[32m 42 passing[0m[90m (82ms)[0m
+[92m [0m[32m 57 passing[0m[90m (110ms)[0m
 

@@ -21,7 +21,9 @@ This module was created out of a need to access a global library of JavaScript h
 | Example | Returns |
 | ------- | ------- |
 | `intake.addLeadingZeros(1, 4)` | "0001" |
+| `intake.addYearsToDate('9/1/2015', 10)` | "Mon Sep 01 2025 00:00:00 GMT-0700 (Pacific Daylight Time)" |
 | `intake.formatSSN('123456789')` | "123-45-6789" |
+| `intake.getDateDiff('1/1/2015', '1/2/2015', 1)` | 1 |
 | `intake.isEmptyOrUndefined('')` | true |
 | `intake.isNumeric('ABC')` | false
 | `intake.toTitleCase('format this string to title case', true)` | "Format This String to Title Case" |

@@ -33,6 +33,30 @@
   	};
 	// ****************************************************************************************************
 
+	// ****************************************************************************************************
+	// addYearsToDate
+	// ****************************************************************************************************
+	//		args: 
+	//			dateToUpdate: 	the original date
+	//			addYears: 		the number of years to add
+	//		summary:
+	//			expects a date and expects to add a number of years to that date and return it
+	// ****************************************************************************************************
+   Intake.prototype.addYearsToDate = function(dateToUpdate, addYears) {
+   	if (isNaN(Date.parse(dateToUpdate))) {
+   		return dateToUpdate;
+   	}
+   	else if (this.isEmptyOrUndefined(addYears)) {
+   		return new Date(dateToUpdate);
+   	}
+   	else {
+			var d = new Date(dateToUpdate);
+      	d.setFullYear(d.getFullYear() + addYears);
+      	return d;
+      }
+  	};
+	// ****************************************************************************************************
+
 	// formatSSN
 	//		args: ssn
 	//		summary: converts a string of numbers with a length of 9 characters to XXX-XX-XXXX format
@@ -52,11 +76,57 @@
 		}
 	};
 
+	// ****************************************************************************************************
+	// getDateDiff
+	// ****************************************************************************************************
+	//		args: 
+	//			date1: 		a date
+	//			date2: 		another date
+	//			interval: 	the date-time interval to use in the comparison between date1 and date2
+	//		summary:
+	//			expects two dates and a value for interval to determine the return amount
+	// ****************************************************************************************************
+   Intake.prototype.getDateDiff = function(date1, date2, interval) {
+		var second = 1000;
+		var minute = second * 60;
+		var hour = minute * 60;
+		var day = hour * 24;
+		var week = day * 7;
+		date1 = new Date(date1);
+		date2 = new Date(date2);
+		var timeDiff = date2 - date1;
+		if (isNaN(timeDiff)) {
+			return NaN;
+		}
+		switch (interval) {
+			case 'years': 
+				return date2.getFullYear() - date1.getFullYear();
+			case 'months': 
+				return ((date2.getFullYear() * 12 + date2.getMonth()) - (date1.getFullYear() * 12 + date1.getMonth()));
+			case 'weeks': 
+				return Math.floor(timeDiff / week);
+			case 'days': 
+				return Math.floor(timeDiff / day); 
+			case 'hours': 
+				return Math.floor(timeDiff / hour);
+			case 'minutes': 
+				return Math.floor(timeDiff / minute);
+			case 'seconds': 
+				return Math.floor(timeDiff / second);
+			default: 
+				return undefined;
+		}
+   };
+   // ****************************************************************************************************
+
+   // ****************************************************************************************************
 	// isEmptyOrUndefined
+	// ****************************************************************************************************
 	//		args: obj
 	//		summary: determines whether the object is undefined, null, or an empty string
 	//					it assumes the consumer wants all cases of emptiness to be equal
 	//		return: Boolean
+	// ****************************************************************************************************
    Intake.prototype.isEmptyOrUndefined = function(obj) {
 		if ((obj === undefined) || (obj === null) || (typeof obj === undefined)) {
 		  	return true;
@@ -71,11 +141,15 @@
 			return false;
 		}
    };
+	// ****************************************************************************************************
 
+	// ****************************************************************************************************
    // isNumeric
+   // ****************************************************************************************************
    //		args: str
    //		summary: checks if a string is numeric
    //		return: Boolean
+   // ****************************************************************************************************
 	Intake.prototype.isNumeric = function(str) {
   		return !isNaN(parseFloat(str)) && isFinite(str);
 	};
@@ -114,6 +188,7 @@
 			return str;
 		}
 	};
+	// ****************************************************************************************************
 
    // CommonJS module
    if (typeof exports !== 'undefined') {
