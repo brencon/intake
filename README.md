@@ -12,7 +12,9 @@ This module was created out of a need to access a global library of JavaScript h
 | Method          | Description   |
 | --------------- |---------------|
 | addLeadingZeros | Pads a number or string with zeros on the left |
+| addYearsToDate | Adds years to a date |
 | formatSSN | Formats a string of numbers as XXX-XX-XXXX |
+| getDateDiff | Determines the numerical difference between two dates for a specific interval |
 | isEmptyOrUndefined | Determines if an object is empty, null, or undefined |
 | isNumeric | Determines if a string can be interpreted as numeirc |
 | toTitleCase | Capitalizes the first character of each word in a string |
