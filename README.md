@@ -17,6 +17,7 @@ This module was created out of a need to access a global library of JavaScript h
 | getDateDiff | Determines the numerical difference between two dates for a specific interval |
 | isEmptyOrUndefined | Determines if an object is empty, null, or undefined |
 | isNumeric | Determines if a string can be interpreted as numeirc |
+| toBoolean | Returns true or false if given true/1 or false/0 as input regardless of type |
 | toTitleCase | Capitalizes the first character of each word in a string |
 
 ### Examples
@@ -28,6 +29,7 @@ This module was created out of a need to access a global library of JavaScript h
 | `intake.getDateDiff('1/1/2015', '1/2/2015', 'days')` | 1 |
 | `intake.isEmptyOrUndefined('')` | true |
 | `intake.isNumeric('ABC')` | false
+| `intake.toBoolean('1')` | true
 | `intake.toTitleCase('format this string to title case', true)` | "Format This String to Title Case" |
 
 ## Installation
