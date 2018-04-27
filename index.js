@@ -190,6 +190,22 @@
 	};
 	// ****************************************************************************************************
 
+  // ****************************************************************************************************
+  // toBoolean
+  // ****************************************************************************************************
+  //		args: bool
+  //		summary: returns true if bool is "true" "1" or 1, or false if bool is "false" "0" or 0
+  //		return: Boolean or original value
+  // ****************************************************************************************************
+  Intake.prototype.toBoolean = function(bool) {
+    // if true/false or 0/1 return boolean otherwise return original value
+    const boolValLower = bool.toString().toLowerCase();
+    if ((boolValLower === '0') || (boolValLower === 'false')) return false;
+    else if ((boolValLower === '1') || (boolValLower === 'true')) return true;
+    else return bool;
+  };
+  // ****************************************************************************************************
+
    // CommonJS module
    if (typeof exports !== 'undefined') {
       if (typeof module !== 'undefined' && module.exports) {
