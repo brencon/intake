@@ -207,29 +207,38 @@
   // ****************************************************************************************************
 
    // CommonJS module
+   /* istanbul ignore else */
    if (typeof exports !== 'undefined') {
-      if (typeof module !== 'undefined' && module.exports) {
-         exports = module.exports = Intake;
-      }
-      exports.Intake = Intake;
+    /* istanbul ignore else */
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = Intake;
+    }
+    exports.Intake = Intake;
    }
 
    // Register as an anonymous AMD module
+   /* istanbul ignore next */
    if (typeof define === 'function' && define.amd) {
-      define([], function () {
-         return Intake;
-      });
+		/* istanbul ignore next */
+	  define([], function () {
+      return Intake;
+    });
    }
 
    // if there is a importsScrips object define intake for worker
+   /* istanbul ignore if */
    if (typeof importScripts !== 'undefined') {
-      intake = new Intake();
+    /* istanbul ignore next */
+    intake = new Intake();
    }
 
    // If there is a window object, that at least has a document property,
    // instantiate and define intake on the window
+   /* istanbul ignore next */
    if (typeof window === "object" && typeof window.document === "object") {
-      window.Intake = Intake;
-      window.intake = new Intake();
+    /* istanbul ignore next */
+    window.Intake = Intake;
+    /* istanbul ignore next */
+    window.intake = new Intake();
    }
 })();
